@@ -1,223 +1,190 @@
 .communication-tabs {
-
     display: flex;
-
-    gap: 8px;
-
-    background: white;
-
-    padding: 5px;
-
-    border-radius: 14px;
-
-    margin-bottom: 15px;
-
+    gap: 6px;
+    background: #EBF3F5;
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
 }
-
 
 .communication-tab {
-
     flex: 1;
-
     border: 0;
-
     background: transparent;
-
-    padding: 11px;
-
-    border-radius: 10px;
-
+    padding: 9px 12px;
+    border-radius: 6px;
     color: var(--muted);
-
+    font-size: 13px;
+    font-weight: 500;
 }
 
+.communication-tab:hover {
+    color: var(--dark-navy);
+}
 
 .communication-tab.active {
-
-    background: #f0efff;
-
-    color: var(--primary);
-
+    background: #FFFFFF;
+    color: var(--primary-dark);
     font-weight: 700;
-
+    box-shadow: 0 1px 4px rgba(16, 42, 67, 0.08);
 }
-
 
 .chat-panel {
-
-    background: white;
-
-    border:
-        1px solid var(--border);
-
+    background: #FFFFFF;
+    border: 1px solid var(--border);
     border-radius: var(--radius);
-
     overflow: hidden;
-
+    box-shadow: var(--shadow-sm);
 }
-
 
 .chat-header {
-
     display: flex;
-
     gap: 12px;
-
     align-items: center;
-
-    padding: 16px;
-
-    border-bottom:
-        1px solid var(--border);
-
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    background: #FFFFFF;
 }
 
+.chat-header strong {
+    color: var(--dark-navy);
+    font-size: 15px;
+}
 
 .chat-header small {
-
     display: block;
-
     color: var(--muted);
-
-    margin-top: 3px;
-
+    margin-top: 2px;
+    font-size: 12px;
 }
-
 
 .messages {
-
-    min-height: 400px;
-
+    min-height: 380px;
     padding: 20px;
-
-    background: #f8f8fb;
-
+    background: var(--bg);
     display: flex;
-
     flex-direction: column;
-
-    gap: 10px;
-
+    gap: 12px;
 }
-
 
 .message {
-
-    max-width: 75%;
-
-    padding: 12px 15px;
-
-    border-radius: 15px;
-
+    max-width: 72%;
+    padding: 10px 14px;
+    border-radius: 12px;
     line-height: 1.5;
-
+    font-size: 14px;
+    box-shadow: var(--shadow-sm);
 }
 
+.message strong {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: var(--primary);
+}
 
 .message span {
-
     display: block;
-
     font-size: 10px;
-
-    opacity: 0.6;
-
-    margin-top: 5px;
-
+    opacity: 0.7;
+    margin-top: 6px;
+    text-align: right;
 }
-
 
 .message.received {
-
-    background: white;
-
+    background: #FFFFFF;
+    color: var(--text);
+    border: 1px solid var(--border);
     align-self: flex-start;
-
+    border-bottom-left-radius: 4px;
 }
-
 
 .message.sent {
-
-    background: #e9e6ff;
-
+    background: var(--primary);
+    color: #FFFFFF;
     align-self: flex-end;
-
+    border-bottom-right-radius: 4px;
 }
 
+.message.sent strong {
+    color: var(--accent);
+}
 
 .message-input {
-
     display: flex;
-
     gap: 8px;
-
     padding: 12px;
-
+    background: #FFFFFF;
+    border-top: 1px solid var(--border);
 }
-
 
 .message-input input {
-
     flex: 1;
-
-    border:
-        1px solid var(--border);
-
+    border: 1px solid var(--border);
     border-radius: 20px;
-
-    padding: 11px 15px;
-
+    padding: 9px 16px;
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
 }
 
+.message-input input:focus {
+    border-color: var(--primary);
+    background: #FFFFFF;
+}
 
 .message-input button {
-
-    width: 44px;
-
+    width: 40px;
+    height: 40px;
     border: 0;
-
     border-radius: 50%;
-
     background: var(--primary);
-
     color: white;
-
+    font-size: 14px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 6px rgba(8, 126, 139, 0.3);
 }
 
+.message-input button:hover {
+    background: var(--primary-dark);
+}
 
 .conversation-list {
-
-    background: white;
-
+    background: #FFFFFF;
     border-radius: var(--radius);
-
+    border: 1px solid var(--border);
     overflow: hidden;
-
+    box-shadow: var(--shadow-sm);
 }
-
 
 .conversation {
-
     display: flex;
-
     align-items: center;
-
-    gap: 12px;
-
-    padding: 16px;
-
-    border-bottom:
-        1px solid var(--border);
-
+    gap: 14px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s ease;
 }
 
+.conversation:last-child {
+    border-bottom: 0;
+}
+
+.conversation:hover {
+    background: #F5F8FA;
+    cursor: pointer;
+}
+
+.conversation strong {
+    color: var(--dark-navy);
+    font-size: 14px;
+}
 
 .conversation small {
-
     display: block;
-
     color: var(--muted);
-
-    margin-top: 4px;
-
-}
+    margin-top: 2px;
+    font-size: 12px;
+}

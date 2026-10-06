@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/communication.css">
     <link rel="stylesheet" href="css/clubs.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/ai.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <header class="topbar">
 
         <div class="brand">
-            <div class="brand-logo">U</div>
+            <img class="brand-logo-img" src="assets/unirise-logo.png.jpeg" alt="UNIRISE Logo">
 
             <div>
                 <h1>UNIRISE</h1>
@@ -199,6 +200,15 @@
 
         </section>
 
+
+        <!-- UNIRISE AI -->
+
+        <section id="aiPage" class="page">
+
+            <div id="aiContainer"></div>
+
+        </section>
+
     </main>
 
 
@@ -247,6 +257,15 @@
 
             <span>◯</span>
             <small>Me</small>
+
+        </button>
+
+
+        <button class="nav-item"
+                data-page="aiPage">
+
+            <span>✦</span>
+            <small>AI</small>
 
         </button>
 
@@ -310,6 +329,9 @@
 <script src="js/clubs.js"></script>
 <script src="js/profile.js"></script>
 <script src="js/search.js"></script>
+<script src="js/aiData.js"></script>
+<script src="js/aiService.js"></script>
+<script src="js/ai.js"></script>
 <script src="js/app.js"></script>
 
 </body>

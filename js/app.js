@@ -16,6 +16,20 @@ document.addEventListener(
 
         renderCommunication();
 
+        if (typeof initializeAI === "function") {
+            initializeAI();
+        }
+
+        const aiTopBtn = document.getElementById("aiTopBtn");
+        if (aiTopBtn) {
+            aiTopBtn.addEventListener("click", () => {
+                const aiNavBtn = document.querySelector('.nav-item[data-page="aiPage"]');
+                if (aiNavBtn) {
+                    aiNavBtn.click();
+                }
+            });
+        }
+
     }
 );
 
